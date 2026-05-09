@@ -3,6 +3,10 @@ ENTRY(kernel_entry)
 SECTIONS {
     . = 0x100000;
 
+    .multiboot : {
+        *(.multiboot)
+    }
+
     .text : {
         *(.text)
     }
